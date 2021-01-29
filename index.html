@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown</title>
+</head>
+
+<!-- Precisas estilizar aqui o teu código -->
+<style>
+    /* Estilizar a div de CountDown-timer (Div Geral) */
+    
+    .countdown-timer {
+        border: 1px solid red;
+    }
+    /* Estilizar a div de CountDown */
+    
+    .countdown-timer .count-down {
+        border: 1px solid blue;
+    }
+    /* Estilizar a cada elemento do timer */
+    
+    .countdown-timer .count-down .timer {
+        border: 1px solid green;
+    }
+    /* Estilizar a cada elemento do timer */
+    
+    .countdown-timer .count-down .timer .days {
+        color: orange;
+    }
+    /* Estilizar a cada elemento do timer */
+    
+    .countdown-timer .count-down .timer .hours {
+        color: pink;
+    }
+    /* Estilizar a cada elemento do timer */
+    
+    .countdown-timer .count-down .timer .minutes {
+        color: yellow;
+    }
+    /* Estilizar a cada elemento do timer */
+    
+    .countdown-timer .count-down .timer .seconds {
+        color: violet;
+    }
+</style>
+
+<body>
+    <!--
+        O atributo datetime-actual ou o datetime-expired podes mandar por meio de uma controller
+        como por exemplo em Laravel eu mandei dessa forma, lembrando que o método Date é do PHP
+        e não do Laravel
+        $datetime_actual = date("F d Y h:i:s");
+        return view('welcome', compact(['datetime_actual']));
+    -->
+    <div class="countdown-timer" datetime-actual="January 29 2021 08:45:10" datetime-expired="January 30 2021 23:59:59"></div>
+</body>
+<script src="jquery-2.1.1.min.js"></script>
+<script src="countdown.js"></script>
+<script src="countdown-config.js"></script>
+
+</html>
